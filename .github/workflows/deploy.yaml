@@ -51,7 +51,7 @@ jobs:
           terraform init \
             -backend-config="bucket=${{secrets.TF_BACKEND_BUCKET}}" \
             -backend-config="region=us-east-1" \
-            -backend-config="key=infra-seup/live"
+            -backend-config="key=tfstate/infra-setup/live"
 
       - name: Terraform Validate
         id: validate
